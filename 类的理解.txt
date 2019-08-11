@@ -1,0 +1,32 @@
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python37\python.exe D:/code/venv/PageObject/myself.py
+21:/333
+15:2587513432920
+16:2587514055936
+/111
+
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python37\python.exe D:/code/venv/PageObject/myself.py
+21:/333
+15:2245948437872
+16:2245948419328
+/44
+==============
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python37\python.exe D:/code/venv/PageObject/myself.py
+22:/333
+28:1593100105520
+16:1593070496600
+17:1593100086368
+21:/111
+31:1593070496600
+
+Process finished with exit code 0
+
+
+实例化子类，子类里没有的，直接用父类的，子类里有的，直接用子类的
+实例化父类，子类里有没有，都只能用自己的，不能用子类的
+
+
+子 有init，父 有init；	 		
+子 无init，父 有init；	实例化子类，先调用构造函数，构造函数里有，直接用，没有的话，把第一句放这“实例化子类，子类里没有的，直接用父类的，子类里有的，直接用子类的”
+
+子 有init，父 无init 
+子 无init，父 无init 
