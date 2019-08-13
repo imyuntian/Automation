@@ -18,7 +18,7 @@ class loginTest(myunit.MyTest):  # loginTest继承MyTest 省去了在每个测�
 
     def test_login1(self):
         """用户名、密码为空登录"""
-        self.user_login_verify()  # 用户名密码都为空
+        self.user_login_verify()  # 用户名密码都为空; 方法调用之前,先执行了setUp(),所以login(self.driver)是没问题的，实例化login类的时候，传入self.driver
         po = login(self.driver)  # 点击登录
         self.assertEqual(po.user_error_hint(), "账号不能为空")  # 断言，看有没有报错
         self.assertEqual(po.pawd_error_hint(), "密码不能为空")  # 断言，看有没有报错

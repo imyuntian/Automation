@@ -10,16 +10,19 @@ import os
 
 # ==========定义发送邮件==========
 def send_mail(file_new):
-    f = open(file_new, 'rb')
+    f = open(file_new, 'rb')  # ./bbs/report\2019-08-14 01_25_35result.html
     mail_body = f.read()
     f.close()
 
     msg = MIMEText(mail_body, 'html', 'utf-8')
     msg['Subject'] = Header("自动化测试报告", 'utf-8')
+    msg['From'] = 'hslworkz6<hslworkz6@126.com>'
+    msg['To'] = 'hslworkz6<hslworkz6@126.com>'
 
     smtp = smtplib.SMTP()
     smtp.connect("smtp.126.com")
-    smtp.login("username@126.com", "receive@126.com", msg.as_string())
+    smtp.login("hslworkz6@126.com", "admin123")  # 授权码admin123
+    smtp.sendmail("hslworkz6@126.com", "hslworkz6@126.com", msg.as_string())  # 3个参数：发、收、内容
     smtp.quit()
     print('email has send out !')
 
@@ -27,10 +30,13 @@ def send_mail(file_new):
 # ==========查找测试报告目录，找到最新生成的测试报告文件==========
 def new_report(testreport):
     lists = os.listdir(testreport)  # 返回指定的文件夹包含的文件或文件夹的名字的列表
+    # print(lists)
     lists.sort(key=lambda fn: os.path.getmtime(testreport + "\\" + fn))  # 用于对原列表进行排序，如果指定参数，则使用比较函数指定的比较函数。  lambda表达式
-    file_new = os.path.join(testreport, lists[-1])
-    print(file_new)
-    return file_new
+    # print(lists)
+    # print(lists[-1])
+    file_new = os.path.join(testreport, lists[-1])  # 将多个路径组合后返回     lists[-1] 排序后的最后一个元素
+    # print(file_new)
+    return file_new  # ./bbs/report\2019-08-14 01_18_42result.html
 
 
 if __name__ == "__main__":
