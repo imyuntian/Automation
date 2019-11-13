@@ -1,0 +1,18 @@
+class LoginByPasswordTest(unittest.TestCase):
+    ''' 测试PC端【通过密码登录】接口：login_by_password '''
+
+    def __init__(self):
+        #构造读取配置文件的路径：d:\mygit\Automation\MyProject\IcnsAutoTest\api\api.ini
+        apicfg_path = os.path.dirname(os.path.dirname(__file__))+"\\conf\\api.ini"
+        apicf = cfgparser.ConfigParser()
+        apicf.read(apicfg_path)
+        self.host = apicf.get("apiconf", "host")
+        self.user = apicf.get("apiconf", "kfjl")
+        self.pwd = apicf.get("apiconf", "kfjlpwd")
+
+self就相当于则个类本身，类对象
+
+方法里的变量，如果想被其他方法使用，需要加self，即 self.host
+             如果只在本方法里使用，就不用加self
+
+很方便，不用return

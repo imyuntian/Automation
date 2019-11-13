@@ -1,0 +1,3 @@
+文件名：用小写＋下划线，例如：login_by_smscode_test.py
+类名：用驼峰命名法，例如：LoginBySMSCodeTest
+方法名：与文件名类似，例如：test_1_login
