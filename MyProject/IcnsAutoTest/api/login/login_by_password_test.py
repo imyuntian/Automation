@@ -10,7 +10,7 @@ class LoginByPasswordTest(unittest.TestCase):
     # 在测试类的开始时被执行一次
     @classmethod
     def setUpClass(self):
-        #构造读取配置文件的路径：d:\mygit\Automation\MyProject\IcnsAutoTest\api\api.ini
+        #构造读取配置文件的路径：d:\mygit\Automation\MyProject\IcnsAutoTest\api\conf\api.ini
         apicfg_path = os.path.dirname(os.path.dirname(__file__))+"\\conf\\api.ini"
         apicf = cfgparser.ConfigParser()
         apicf.read(apicfg_path)
