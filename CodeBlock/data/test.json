@@ -1,0 +1,23 @@
+{
+    "biz": [
+        {
+            "assetsType": "FGZ",
+            "budgetSubjectCode": "MDBS00000251",
+            "categoryName": "IT服务",
+            "currency": "CNY",
+            "effectiveStartDate": "2020-03-21",
+            "exTaxAmount": "512000013",
+            "exTaxUnitPrice": "520",
+            "lineNo": "20205213",
+            "poLineNo": "PO202005213-1",
+            "poNo": "PO202005213",
+            "poType": "PO",
+            "productInfo": "第三方服务",
+            "productLineCode": "MDPD00000008",
+            "unit": "人月"
+        }
+    ],
+    "eventType": "1000",
+    "sourceSys": "p2p",
+    "timestamp": "20200531181818"
+}
